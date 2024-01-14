@@ -6,11 +6,8 @@
     <title>Backyard Birds!</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
 </head>
-
-    
-</head>
 <body>
-
+    
     <!-- Create a full CRUD application of your choice using an API or JSON Server.
     Use JQuery/AJAX to interact with the API. 
     Use a form to post new entities.
@@ -18,7 +15,7 @@
     Include a way to get entities from the API.
     Use Bootstrap and CSS to style your project. -->
 
-    <div class="container-fluid">
+    <div class="container-fluid justify-content-center">
         <header class="bg-dark container-fluid p-3 d-flex flex-row justify-content-evenly text-center">
             <h1 class="text-white">Create Checklist</h1>
         </header>
@@ -53,20 +50,20 @@
             </div>
 
             <div class="card m-2">
-                <div class="card-header display-6 text-center bg-dark">
-                    <h2 class="text-white">Your List</h2>
+                <div class="card-header display-6 text-center p-3 bg-dark">
+                    <h2 class="text-white">Your Backyard Birds:</h2>
                 </div>
                 <div class="table-responsive">
                     <table class="table table-secondary table-striped">
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>Bird</th>
+                                <th>Species Name</th>
                                 <th>Date</th>
                                 <th>Location</th>
                                 <th>Notes</th>
-                                <th>Delete</th>
                                 <th>Update</th>
+                                <th>Delete</th>
                             </tr>
                         </thead>
                         <tbody id="birdTable"></tbody>
@@ -78,7 +75,7 @@
                 <div class="modal-dialog modal-dialog-centered">
                   <div class="modal-content">
                     <div class="modal-header bg-dark">
-                      <h5 class="modal-title text-white" id="updateModalLabel" >Update Bird Observation</h5>
+                      <h5 class="modal-title text-white" id="updateModalLabel" >Update Observations</h5>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -103,20 +100,24 @@
                             <label for="locationUpdate" class="form-label">Notes</label>
                             <input type="text" class="form-control" id="notesUpdate" required>
                           </div>
-                        <div class="mb-3">
-                            <button class="">Update</button>
+                            <div class="mb-3 text-center">
+                                <button type="submit" class="btn btn-secondary btn-lg btn-block" id="modalUpdateButton">Update</button>
                             </div>
-    <div>
-
-        <footer class="bg-dark text-center p-3 mt-auto">
-          <p class="text-white">Design By: Cate Merritt 2024</p>
-        </footer>
-
+                            </div>  
     </div>
+    </div>
+    </div>
+    </div>
+
+
+    <footer class="bg-dark text-center p-3 mt-auto">
+        <p class="text-white">Design By: Cate Merritt 2024</p>
+      </footer>
+
+
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="index.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-</body>
 </body>
 </html>
 

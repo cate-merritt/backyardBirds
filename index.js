@@ -38,10 +38,10 @@
             <td>${bird.location}</td>
             <td>${bird.notes}</td>
             <td> 
-              <button class="btn btn-danger btn-sm deleteButton" data-id="${bird.id}">Delete</button> 
+            <button class="btn btn-warning btn-sm updateButton" data-id="${bird.id}" data-bs-toggle="modal" data-bs-target="#updateModal"><strong>Update</strong></button> 
             </td>
             <td> 
-              <button class="btn btn-info btn-sm updateButton" data-id="${bird.id}" data-bs-toggle="modal" data-bs-target="#updateModal">Update</button> 
+            <button class="btn btn-danger btn-sm deleteButton" data-id="${bird.id}"><strong>Delete</strong></button>  
             </td>
           </tr>
         `)
@@ -96,7 +96,10 @@
         updateBird(e);
         document.getElementById("updateForm").reset();
     });
-
+    
+    $("#updateModal").on("click", "#modalUpdateButton", function () {
+        updateBird(event);
+    });
     /** DELETE */
     function deleteBird(id) {
         $.ajax(`${URL_ENDPOINT}/${id}`, {
