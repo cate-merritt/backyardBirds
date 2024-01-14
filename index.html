@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Backyard Birds!</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+
+    
+</head>
+<body>
+
+    <!-- Create a full CRUD application of your choice using an API or JSON Server.
+    Use JQuery/AJAX to interact with the API. 
+    Use a form to post new entities.
+    Build a way for users to update or delete entities.
+    Include a way to get entities from the API.
+    Use Bootstrap and CSS to style your project. -->
+
+    <div class="container-fluid">
+        <header class="bg-dark container-fluid p-3 d-flex flex-row justify-content-evenly text-center">
+            <h1 class="text-white">Create Checklist</h1>
+        </header>
+        <div class="container">
+            <div class="card m-2">
+                <div class="card-header display-6 text-center bg-dark">
+                   <h2 class="text-white">Input Data:</h2>
+                </div>
+                <div class="card-body">
+                    <form class="row align-items-end g-3" id="addForm">
+                        <div class="col-md-8">
+                            <label for="birdInput" class="form-label">Species Name: </label>
+                            <input type="text" class="form-control" id="birdInput" required />
+                        </div>
+                        <div class="col-md-4">
+                            <label for="dateInput">Observation Date: </label>
+                            <input type="date" class="form-control" id="dateInput" />
+                        </div>
+                        <div class="col-md-6">
+                            <label for="locationInput" class="form-label">Location: </label>
+                            <input type="text" class="form-control" id="locationInput" required />
+                        </div>
+                        <div class="col-md-6">
+                            <label for="notesInput" class="form-label">Notes: </label>
+                            <input type="text" class="form-control" id="notesInput" />
+                        </div>
+                        <div class="d-grid gap-2 col-6 mx-auto">
+                            <button class="btn btn-outline-dark" id="submitButton">Add Observation</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="card m-2">
+                <div class="card-header display-6 text-center bg-dark">
+                    <h2 class="text-white">Your List</h2>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-secondary table-striped">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Bird</th>
+                                <th>Date</th>
+                                <th>Location</th>
+                                <th>Notes</th>
+                                <th>Delete</th>
+                                <th>Update</th>
+                            </tr>
+                        </thead>
+                        <tbody id="birdTable"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="updateModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header bg-dark">
+                      <h5 class="modal-title text-white" id="updateModalLabel" >Update Bird Observation</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <form id="updateForm">
+                        <div class="mb-3">
+                          <label for="updateId" class="form-label">Bird ID</label>
+                          <input type="text" class="form-control" id="updateId" required>
+                        </div>
+                        <div class="mb-3">
+                          <label for="birdUpdate" class="form-label">Species Name</label>
+                          <input type="text" class="form-control" id="birdUpdate" required>
+                        </div>
+                        <div class="mb-3">
+                          <label for="dateUpdate" class="form-label">Observation Date</label>
+                          <input type="date" class="form-control" id="dateUpdate" required>
+                        </div>
+                        <div class="mb-3">
+                          <label for="locationUpdate" class="form-label">Location</label>
+                          <input type="text" class="form-control" id="locationUpdate" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="locationUpdate" class="form-label">Notes</label>
+                            <input type="text" class="form-control" id="notesUpdate" required>
+                          </div>
+                        <div class="mb-3">
+                            <button class="">Update</button>
+                            </div>
+    <div>
+
+        <footer class="bg-dark text-center p-3 mt-auto">
+          <p class="text-white">Design By: Cate Merritt 2024</p>
+        </footer>
+
+    </div>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="index.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</body>
+</html>
+
