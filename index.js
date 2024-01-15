@@ -1,4 +1,4 @@
-// Wrap your code in an IIFE (Immediately Invoked Function Expression) to create a new scope
+// Create new scope with IIFE (Immediately Invoked Function Expression) wrapping
 (function () {
     // Define the API endpoint outside any function to make it global
     const API_ENDPOINT = "https://65a317d3a54d8e805ed3683b.mockapi.io/api/week_12/backyardBirds";
@@ -6,7 +6,7 @@
     /** CREATE */
     $("#addForm").on("submit", (e) => {
         e.preventDefault();
-        // Gather bird data from the form
+        // Gather user input of bird data from the form
         const birdData = {
             name: $("#birdInput").val(),
             date: $("#dateInput").val(),
